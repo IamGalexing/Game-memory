@@ -62,7 +62,8 @@ cards.forEach((card) => card.addEventListener("click", flipCard));
 resetBtn.addEventListener("click", () => {
   cards.forEach((card) => {
     card.classList.remove("flip");
-    resetBoard();
+    card.addEventListener("click", flipCard);
   });
+  resetBoard();
   setTimeout(mixCards, 600);
 });
